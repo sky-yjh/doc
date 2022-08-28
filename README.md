@@ -94,3 +94,15 @@ $ git remote set-url origin git@github.com:askfiy/nvim.git
 
 
 
+### git  问题结局
+
+#### git push错误failed to push some refs to的解决
+
+​        这个问题是因为远程库与本地库不一致造成的，那么我们把远程库同步到本地库就可以了。使用指令
+
+​		`git pull --rebase origin main`
+
+ 		产生原因：修改了线上的仓库同时对本地仓库进行了不同更新，所以需要先将本地改动存在rebase里，将远程仓库先pull下来，再上传本地仓库。
+
+
+
